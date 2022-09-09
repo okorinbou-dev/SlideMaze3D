@@ -1,0 +1,1 @@
+{"Width":8,"Height":13,"AnswerRouteJson":"{\"target\":[{\"x\":1,\"y\":6},{\"x\":6,\"y\":6}]}","NeedBlockJson":"{\"target\":[]}","NeedlessBlockJson":"{\"target\":[]}","SwitchBlockJson":"{\"target\":[]}","AnswerRoute":[{"x":1,"y":6},{"x":6,"y":6}],"NeedBlock":[],"NeedlessBlock":[],"SwitchBlock":[],"CoefficientA":2,"CoefficientB":0,"CoefficientC":0}

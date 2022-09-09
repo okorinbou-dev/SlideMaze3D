@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{C697AF34-22D4-EE20-D760-C1C1AEFC0DB7}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/StageData/01_OPAL/000001.txt">
+    <Files>
+      <File FileName="Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/Assertions/AllocatingGCMemoryConstraint.cs" Line="2" Column="1" />
+      <File FileName="Assets/Modules/UnityIAP/Scripts/UnityIAPModule.cs" Line="209" Column="1" />
+      <File FileName="Assets/Scripts/Flickstar/IAP/IAPCallback.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/Flickstar/GameManager/ScreenController/GameController.cs" Line="1273" Column="3" />
+      <File FileName="Assets/Scripts/Flickstar/GameManager/GameManager.cs" Line="59" Column="1" />
+      <File FileName="Assets/Scripts/Flickstar/GameManager/Dialog/DialogGetHint.cs" Line="47" Column="1" />
+      <File FileName="Assets/Scripts/Flickstar/GameManager/Dialog/DialogShop.cs" Line="92" Column="1" />
+      <File FileName="Assets/Scripts/Magicant/AppConfig.cs" Line="339" Column="1" />
+      <File FileName="Assets/Scripts/Magicant/Common/NativeUtils.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Magicant/Common/NativeUtilsPlugin_Android.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Magicant/Common/NativeUtilsPlugin_iOS.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Flickstar/AnalyticsManager/AnalyticsManager.cs" Line="145" Column="1" />
+      <File FileName="Assets/Editor/Flickstar/json2txt.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/StageData/01_OPAL/000001.txt" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SlideMaze3D" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="63b4c643-068d-4e6e-97dc-ec10dd2e52a6" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

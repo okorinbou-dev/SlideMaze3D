@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef42ca106c084ae784f3e72a560f73c, type: 3}
+  m_Name: AppConfig
+  m_EditorClassIdentifier: 
+  AdManager:
+    AudioMute: 1
+    InterstitialAdOnResume:
+      Enable: 0
+      Category: RESUME_INTERSTITIAL
+      MinIntervalTimeSec: 10
+      LoadingTimeSec: 1
+    InterstitialAdIntervalTimeSec: 180
+    RewardedVideoAdIntervalTimeSec: 0
+  AppsFlyer:
+    DevKey: Fxb9MzBVeVAYmzTpmLutjF
+    IOSAppID: '1375868538 '
+    SendConversionToAnalytics: 0
+  GoogleAnalytics:
+    IOS:
+      TrackingCode: 
+    Android:
+      TrackingCode: 
+  OneSignal:
+    IOS:
+      AppID: 1aa1e09e-9469-481d-b470-e896a732d9f7
+    Android:
+      AppID: c2c10d7d-085c-478e-8139-1c1882aaf5a5
+      GoogleProjectNumber: 710584306644
+  AdMob:
+    IOS:
+      AppId: ca-app-pub-2207869685880375~8622876772
+      AdUnitList:
+      - Category: FUTTER_BANNER
+        AdUnitId: ca-app-pub-2207869685880375/8926129108
+        AdType: 0
+        AdSize: 0
+        AutoLoad: 1
+      - Category: APP_INTERSTITIAL
+        AdUnitId: ca-app-pub-2207869685880375/3510150892
+        AdType: 1
+        AdSize: 0
+        AutoLoad: 1
+      - Category: RESUME_INTERSTITIAL
+        AdUnitId: ca-app-pub-2207869685880375/4791442971
+        AdType: 1
+        AdSize: 0
+        AutoLoad: 1
+      - Category: REWARDMOVIE
+        AdUnitId: ca-app-pub-2207869685880375/4282099092
+        AdType: 2
+        AdSize: 0
+        AutoLoad: 1
+    Android:
+      AppId: ca-app-pub-2207869685880375~2980378293
+      AdUnitList:
+      - Category: FUTTER_BANNER
+        AdUnitId: ca-app-pub-2207869685880375/3393766672
+        AdType: 0
+        AdSize: 0
+        AutoLoad: 1
+      - Category: APP_INTERSTITIAL
+        AdUnitId: ca-app-pub-2207869685880375/9919646571
+        AdType: 1
+        AdSize: 1
+        AutoLoad: 1
+      - Category: RESUME_INTERSTITIAL
+        AdUnitId: ca-app-pub-2207869685880375/4621597178
+        AdType: 1
+        AdSize: 1
+        AutoLoad: 1
+      - Category: REWARDMOVIE
+        AdUnitId: ca-app-pub-2207869685880375/6555116638
+        AdType: 2
+        AdSize: 1
+        AutoLoad: 1
+    AdMobModuleClassNameList:
+    - Magicant.AdMobAppLovinModule
+  AdMobAppLovin:
+    SdkKey: mk3TVDhzOrT674QLKJy8Tq94HhFKek4PR7yyLdvlTSsbWGysZu-6h8B-qQJT8NtaVqWsSQawtQVOhSFGKEN1MT
+  FirebaseRemoteConfig:
+    CacheExpirationSec: 86400
+    CacheExpirationSecDev: 300
+  UnityIAP:
+    CallbackScript: {fileID: 11500000, guid: 5751f4ba56ec8495e8b107b3337afce3, type: 3}
+    CallbackClassName: IAPCallback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    Products:
+    - Name: REMOVEADS
+      ProductId: flickstar.removeads
+      ProductType: 1
+    - Name: HINT10
+      ProductId: flickstar.hint10
+      ProductType: 0
+    - Name: HINT55
+      ProductId: flickstar.hint55
+      ProductType: 0
+    - Name: HINT110
+      ProductId: flickstar.hint110
+      ProductType: 0
