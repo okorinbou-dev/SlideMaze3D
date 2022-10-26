@@ -87,7 +87,7 @@ public class GameController : ScreenController
 
 	GameObject obj3DPlayer;
 	GameObject obj3DGoal;
-
+	List<GameObject> list3DBlock;
 
 	float BlockSize = 0.0f;
 	Position CurrentPlayerPos;
@@ -152,6 +152,7 @@ public class GameController : ScreenController
 
 			SetButton();
 
+			/*
 			GameObject prefabBlock135 = (GameObject)Resources.Load ("Prefabs/Flickstar/prefabBlock135");
 			GameObject prefabBlock135Shadow = (GameObject)Resources.Load ("Prefabs/Flickstar/prefabBlock135DropShadow");
 
@@ -168,6 +169,7 @@ public class GameController : ScreenController
 			objGoalBlockShadow.transform.localScale = new Vector3 (1, 1, 1);
 			objGoalBlockShadow.GetComponent<RectTransform> ().localPosition = new Vector2 (0.0f, 0.0f);
 			objGoalBlockShadow.SetActive (false);
+			*/
 
 			/*
 			objBlockShadow = new GameObject[GRID_MAX_HEIGHT, GRID_MAX_WIDTH];
@@ -182,7 +184,6 @@ public class GameController : ScreenController
 					objBlockShadow [y, x].SetActive (false);
 				}
 			}
-			*/
 
 			objGoalBlock = Instantiate (prefabBlock135, new Vector2 (0.0f, 0.0f), Quaternion.identity);
 			objGoalBlock.transform.SetParent (objBoard.transform);
@@ -192,7 +193,6 @@ public class GameController : ScreenController
 			objGoalBlock.transform.Find ("BlockStar").GetComponent<Image> ().enabled = true;
 			objGoalBlock.SetActive (false);
 
-			/*
 			objBlock = new GameObject[GRID_MAX_HEIGHT, GRID_MAX_WIDTH];
 
 			for (int y = GRID_MAX_HEIGHT - 1; y >= 0; y--) {
@@ -220,6 +220,7 @@ public class GameController : ScreenController
 			}
 			*/
 
+			/*
 			objPlayer = Instantiate (prefabBlock135, new Vector2 (0.0f, 0.0f), Quaternion.identity);
 			objPlayer.transform.SetParent (objBoard.transform);
 			objPlayer.name = "PLAYER";
@@ -242,6 +243,7 @@ public class GameController : ScreenController
 			objHintBlockShadow.transform.localScale = new Vector3 (1, 1, 1);
 			objHintBlockShadow.GetComponent<RectTransform> ().localPosition = new Vector2 (0.0f, 0.0f);
 			objHintBlockShadow.SetActive (false);
+			*/
 
 			// ota add 3D
 			YCLib.Utility.ObjectPool.Initialize(3);
@@ -317,6 +319,7 @@ public class GameController : ScreenController
 		// ヒントブロック配置
 		CurrentPlayerPos = new Position (StageData.Instance.data.AnswerRoute [0].x, StageData.Instance.data.AnswerRoute [0].y);
 
+		/*
 		objHintBlock.transform.localScale = new Vector2 (scale, scale);
 		objHintBlock.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (CurrentPlayerPos.x), ((BlockSize) * (CurrentPlayerPos.y)));
 		objHintBlock.transform.Find ("BlockSurface").GetComponent<Image> ().color = new Color32 (Global.Instance.GetCurrentPackColor ().r, Global.Instance.GetCurrentPackColor ().g, Global.Instance.GetCurrentPackColor ().b, 128);
@@ -324,12 +327,14 @@ public class GameController : ScreenController
 		HintBlockPhase = HITBLOCKPHASE_IDLE;
 		objHintBlock.SetActive (false);
 
-//		hintBlock = new Block (objHintBlock, objHintBlockShadow, CurrentPlayerPos.x, CurrentPlayerPos.y); 
-//		hintBlock.SetPlayer ();
+		hintBlock = new Block (objHintBlock, objHintBlockShadow, CurrentPlayerPos.x, CurrentPlayerPos.y); 
+		hintBlock.SetPlayer ();
+		*/
 
 		// 操作ブロック配置
 		CurrentPlayerPos = new Position (StageData.Instance.data.AnswerRoute [0].x, StageData.Instance.data.AnswerRoute [0].y);
 
+		/*
 		objPlayer.transform.localScale = new Vector2 (scale, scale);
 		objPlayer.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (CurrentPlayerPos.x), ((BlockSize) * (CurrentPlayerPos.y)));
 		objPlayer.transform.Find ("BlockSurface").GetComponent<Image> ().color = Global.Instance.GetCurrentPackColor ();
@@ -339,13 +344,14 @@ public class GameController : ScreenController
 		objPlayerShadow.transform.localScale = new Vector2 (scale, scale);
 		objPlayerShadow.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (CurrentPlayerPos.x), ((BlockSize) * (CurrentPlayerPos.y)));
 		objPlayerShadow.SetActive (true);
+		*/
 
-//		playerBlock = new Block (objPlayer, objPlayerShadow, CurrentPlayerPos.x, CurrentPlayerPos.y); 
-//		playerBlock.SetPlayer ();
+		//		playerBlock = new Block (objPlayer, objPlayerShadow, CurrentPlayerPos.x, CurrentPlayerPos.y); 
+		//		playerBlock.SetPlayer ();
 
 		// 3D
-		obj3DPlayer = YCLib.Utility.ObjectPool.Rent(0);
-		obj3DPlayer.GetComponent<MeshRenderer>().material.color = Color.red;
+		obj3DPlayer = YCLib.Utility.ObjectPool.Rent(1);
+//		obj3DPlayer.GetComponent<MeshRenderer>().material.color = Color.red;
 		obj3DPlayer.transform.position = new Vector3(CurrentPlayerPos.x - (StageData.Instance.data.Width / 2.0f), CurrentPlayerPos.y - (StageData.Instance.data.Height / 2.0f), 0);
 		obj3DPlayer.SetActive(true);
 
@@ -353,6 +359,7 @@ public class GameController : ScreenController
 		playerBlock.SetPlayer();
 
 		// ゴールブロック配置
+		/*
 		objGoalBlock.transform.localScale = new Vector2 (scale, scale);
 		objGoalBlock.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].x), ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].y)));
 		objGoalBlock.transform.Find ("BlockBackground").GetComponent<Image> ().color = Global.Instance.GetColor (Global.Instance.COL_GRAY);
@@ -363,6 +370,7 @@ public class GameController : ScreenController
 		objGoalBlockShadow.transform.localScale = new Vector2 (scale, scale);
 		objGoalBlockShadow.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].x), ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].y)));
 		objGoalBlockShadow.SetActive (true);
+		*/
 
 //		goalBlock = new Block (objGoalBlock, objGoalBlockShadow, StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].x, StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].y); 
 //		goalBlock.SetGoal (objGoalBlock.transform.Find ("BlockStar").GetComponent<Image> ());
@@ -402,11 +410,12 @@ public class GameController : ScreenController
 						*/
 
 						// 3D
-						List<GameObject> cur3DList = (StageData.Instance.data.Grid[y, x] == Data.GRIDTYPE_SWITCHBLOCK) ? switch3DBlock : normal3DBlock;
-						cur3DList.Add(YCLib.Utility.ObjectPool.Rent(0));
-						cur3DList[cur3DList.Count - 1].GetComponent<MeshRenderer>().material.color = Color.white;
-						cur3DList[cur3DList.Count - 1].transform.position = new Vector3(x - (StageData.Instance.data.Width / 2.0f), y - (StageData.Instance.data.Height / 2.0f), 0);
-						cur3DList[cur3DList.Count - 1].SetActive(true);
+						list3DBlock = (StageData.Instance.data.Grid[y, x] == Data.GRIDTYPE_SWITCHBLOCK) ? switch3DBlock : normal3DBlock;
+
+						list3DBlock.Add(YCLib.Utility.ObjectPool.Rent(0));
+						list3DBlock[list3DBlock.Count - 1].GetComponent<MeshRenderer>().material.color = Color.white;
+						list3DBlock[list3DBlock.Count - 1].transform.position = new Vector3(x - (StageData.Instance.data.Width / 2.0f), y - (StageData.Instance.data.Height / 2.0f), 0);
+						list3DBlock[list3DBlock.Count - 1].SetActive(true);
 
 
 						/*
@@ -490,13 +499,16 @@ public class GameController : ScreenController
 			}
 		}
 
+		/*
 		objGoalBlock.transform.Find ("BlockBackground").GetComponent<Image> ().color = (switchBlock.Count == 0) ? Global.Instance.GetCurrentPackColor () : Global.Instance.GetColor (Global.Instance.COL_GRAY);
 		objGoalBlock.transform.Find ("BlockStar").GetComponent<Image> ().color = (switchBlock.Count == 0) ? Global.Instance.GetCurrentPackColor () : Global.Instance.GetColor (Global.Instance.COL_GRAY);
 
 		objHintButton.transform.Find ("imgHint/imgHintBatch").GetComponent<Image> ().color = Global.Instance.GetCurrentPackColor ();
+		*/
+
 		UpdateHintNum ();
 
-		objPlayer.transform.SetAsLastSibling ();
+//		objPlayer.transform.SetAsLastSibling ();
 		GameCleared = false;
 		GameFailed = false;
 
@@ -529,14 +541,21 @@ public class GameController : ScreenController
 	public void Restart ()
 	{
 		// ブロック配置
+		/*
 		float defaultblocksize = 135.0f;
 		float scale = 1480.0f / (StageData.Instance.data.Height * defaultblocksize);
 		BlockSize = defaultblocksize * scale;
 		objBoard.transform.localPosition = new Vector2 (-(BlockSize * ((float)StageData.Instance.data.Width) / 2.0f) + (BlockSize / 2.0f), -(BlockSize * ((float)StageData.Instance.data.Height) / 2.0f) + (BlockSize / 2.0f));
+		*/
 
 		// 操作ブロック配置
 		CurrentPlayerPos = new Position (StageData.Instance.data.AnswerRoute [0].x, StageData.Instance.data.AnswerRoute [0].y);
 
+		obj3DPlayer.transform.position = new Vector3(CurrentPlayerPos.x - (StageData.Instance.data.Width / 2.0f), CurrentPlayerPos.y - (StageData.Instance.data.Height / 2.0f), 0);
+
+		playerBlock = new Block(obj3DPlayer, CurrentPlayerPos.x, CurrentPlayerPos.y);
+		playerBlock.SetPlayer();
+		/*
 		objPlayer.transform.localScale = new Vector2 (scale, scale);
 		objPlayer.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (CurrentPlayerPos.x), ((BlockSize) * (CurrentPlayerPos.y)));
 		objPlayer.transform.Find ("BlockSurface").GetComponent<Image> ().color = Global.Instance.GetCurrentPackColor ();
@@ -547,10 +566,12 @@ public class GameController : ScreenController
 		objPlayerShadow.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (CurrentPlayerPos.x), ((BlockSize) * (CurrentPlayerPos.y)));
 		objPlayerShadow.SetActive (true);
 
-//		playerBlock = new Block (objPlayer, objPlayerShadow, CurrentPlayerPos.x, CurrentPlayerPos.y); 
-//		playerBlock.SetPlayer ();
+		playerBlock = new Block (objPlayer, objPlayerShadow, CurrentPlayerPos.x, CurrentPlayerPos.y); 
+		playerBlock.SetPlayer ();
+		*/
 
 		// ゴールブロック配置
+		/*
 		objGoalBlock.transform.localScale = new Vector2 (scale, scale);
 		objGoalBlock.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].x), ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].y)));
 		objGoalBlock.transform.Find ("BlockBackground").GetComponent<Image> ().color = (switchBlock.Count == 0) ? Global.Instance.GetCurrentPackColor () : Global.Instance.GetColor (Global.Instance.COL_GRAY);
@@ -561,11 +582,12 @@ public class GameController : ScreenController
 		objGoalBlockShadow.transform.localScale = new Vector2 (scale, scale);
 		objGoalBlockShadow.GetComponent<RectTransform> ().localPosition = new Vector2 ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].x), ((BlockSize) * (StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].y)));
 		objGoalBlockShadow.SetActive (true);
+		*/
 
-//		goalBlock = new Block (objGoalBlock, objGoalBlockShadow, StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].x, StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].y); 
-//		goalBlock.SetGoalStar (objGoalBlock.transform.Find ("BlockStar").GetComponent<Image> ());
+		//		goalBlock = new Block (objGoalBlock, objGoalBlockShadow, StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].x, StageData.Instance.data.AnswerRoute [StageData.Instance.data.AnswerRoute.Count - 1].y); 
+		//		goalBlock.SetGoalStar (objGoalBlock.transform.Find ("BlockStar").GetComponent<Image> ());
 
-//		goalBlock.GoalAnimeInit ();
+		//		goalBlock.GoalAnimeInit ();
 
 		for (int i = 0; i < switchBlock.Count; i++) {
 			switchBlock [i].SetSwitchFlag (true);
@@ -586,7 +608,7 @@ public class GameController : ScreenController
 			}
 		}
 
-		objPlayer.transform.SetAsLastSibling ();
+//		objPlayer.transform.SetAsLastSibling ();
 
 		GameCleared = false;
 		GameFailed = false;
@@ -1056,10 +1078,22 @@ public class GameController : ScreenController
 	}
 
 	private void PhaseGameNextGame() {
+
 		SaveData.Instance.SetStageStatus (Global.Instance.SelectPackNo, Global.Instance.SelectStageNo, Global.STAGEICON_CLEAR);
 		Global.Instance.SetStageStatus (Global.Instance.SelectPackNo, Global.Instance.SelectStageNo, Global.STAGEICON_CLEAR);
+
 		Global.Instance.SelectStageNo++;
-		if (Global.Instance.SelectStageNo >= 60) {
+
+		foreach (GameObject obj in list3DBlock)
+        {
+			YCLib.Utility.ObjectPool.Return(0, obj);
+		}
+
+		YCLib.Utility.ObjectPool.Return(1, obj3DPlayer);
+		YCLib.Utility.ObjectPool.Return(2, obj3DGoal);
+
+		if (Global.Instance.SelectStageNo >= 60)
+		{
 			Global.Instance.SelectStageNo = 0;
 			setChangeScreen (CHANGESCREEN_PACKSELECT);
 		} else {
@@ -1068,6 +1102,7 @@ public class GameController : ScreenController
 			}
 			Initialize ();
 		}
+
 		SaveData.Instance.Save ();
 	}
 
@@ -1215,8 +1250,9 @@ public class GameController : ScreenController
 
 		switch (GamePhase) {
 		case GAMEPHASE_STARTANIME:
+			GamePhase = GAMEPHASE_TOUCHSCREEN;
 //			PhaseStartAnime ();
-				break;
+			break;
 		case GAMEPHASE_TOUCHSCREEN:
 			if (!objDialogNoVideo.activeSelf) {
 				PhaseTouchScreen ();
