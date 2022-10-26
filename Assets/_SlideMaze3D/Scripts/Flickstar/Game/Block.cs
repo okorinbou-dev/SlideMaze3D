@@ -11,8 +11,8 @@ public class Block
 	const int MOVE_RIGHT = 3;
 
 	GameObject objBlock;
-	GameObject objBlockShadow;
-	Image imgSurface;
+//	GameObject objBlockShadow;
+//	Image imgSurface;
 
 	int MoveDirection = MOVE_UP;
 
@@ -33,15 +33,16 @@ public class Block
 	public int x;
 	public int y;
 
-	public Block(GameObject obj, GameObject objshd, int gridx, int gridy)
+	public Block(GameObject obj, int gridx, int gridy)
+//	public Block(GameObject obj, GameObject objshd, int gridx, int gridy)
 	{
 		objBlock = obj;
-		objBlockShadow = objshd;
+//		objBlockShadow = objshd;
 		x = gridx;
 		y = gridy;
 		SwitchFlag = false;
 		goalFlag = false;
-		imgSurface = objBlock.transform.Find("BlockSurface").GetComponent<Image>();
+//		imgSurface = objBlock.transform.Find("BlockSurface").GetComponent<Image>();
 	}
 
 	public void SetSwitchFlag(bool flag)
@@ -60,8 +61,8 @@ public class Block
 		Scale = 0.0f;
 		AppearTime = 0.0f;
 		InitClear();
-		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
-		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
 	}
 
 	public bool PlayerAppear()
@@ -78,8 +79,8 @@ public class Block
 
 		Scale = 1.0f * (AppearTime / 0.5f);
 
-		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
-		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
 		return ret;
 	}
 
@@ -100,8 +101,8 @@ public class Block
 		Scale = 0.0f;
 		AppearTime = 0.0f;
 		goalFlag = true;
-		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
-		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
 	}
 
 	float RotStar = 0.0f;
@@ -125,8 +126,8 @@ public class Block
 
 		Scale = (AppearTime / AppearTimeMax);
 
-		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
-		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlock.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
+//		objBlockShadow.transform.localScale = new Vector3(localScale * Scale, localScale * Scale, 1.0f);
 
 		return ret;
 	}
@@ -174,6 +175,8 @@ public class Block
 		TargetMovePos = targetpos;
 		MoveTime = 0.0f;
 		MaxTime = time;
+
+		Debug.Log("StartMovePos " + StartMovePos + " : TargetMovePos " + TargetMovePos);
 	}
 
 	public bool isMove()
@@ -192,13 +195,13 @@ public class Block
 	public void InitClear()
 	{
 		ClearScale = 1.0f;
-		imgSurface.transform.localScale = new Vector3(1, 1, 1);
+//		imgSurface.transform.localScale = new Vector3(1, 1, 1);
 	}
 
 	public void SetClear()
 	{
 		ClearScale = 1.0f;
-		imgSurface.transform.localScale = new Vector3(ClearScale, ClearScale, 1);
+//		imgSurface.transform.localScale = new Vector3(ClearScale, ClearScale, 1);
 		ClearAnime = true;
 	}
 
@@ -216,7 +219,7 @@ public class Block
 		}
 
 		ClearScale += 0.5f * (60 * Time.deltaTime);
-		imgSurface.transform.localScale = new Vector3(ClearScale, ClearScale, 1);
+//		imgSurface.transform.localScale = new Vector3(ClearScale, ClearScale, 1);
 	}
 
 	bool TouchAnimeRequest = false;
@@ -254,6 +257,7 @@ public class Block
 
 	public void TouchAnimeUpdate()
 	{
+		/*
 		if (TouchAnime)
 		{
 
@@ -273,22 +277,23 @@ public class Block
 			{
 				case MOVE_DOWN:
 					objBlock.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, TouchStartPos + TouchMove, 1);
-					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, TouchStartPos + TouchMove, 1);
+//					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, TouchStartPos + TouchMove, 1);
 					break;
 				case MOVE_UP:
 					objBlock.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, TouchStartPos - TouchMove, 1);
-					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, TouchStartPos - TouchMove, 1);
+//					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, TouchStartPos - TouchMove, 1);
 					break;
 				case MOVE_LEFT:
 					objBlock.GetComponent<RectTransform>().localPosition = new Vector3(TouchStartPos - TouchMove, objBlock.GetComponent<RectTransform>().localPosition.y, 1);
-					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(TouchStartPos - TouchMove, objBlock.GetComponent<RectTransform>().localPosition.y, 1);
+//					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(TouchStartPos - TouchMove, objBlock.GetComponent<RectTransform>().localPosition.y, 1);
 					break;
 				case MOVE_RIGHT:
 					objBlock.GetComponent<RectTransform>().localPosition = new Vector3(TouchStartPos + TouchMove, objBlock.GetComponent<RectTransform>().localPosition.y, 1);
-					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(TouchStartPos + TouchMove, objBlock.GetComponent<RectTransform>().localPosition.y, 1);
+//					objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(TouchStartPos + TouchMove, objBlock.GetComponent<RectTransform>().localPosition.y, 1);
 					break;
 			}
 		}
+		*/
 	}
 
 	public Vector3 GetPos()
@@ -305,6 +310,8 @@ public class Block
 
 		float pos = GetBreakPos(StartMovePos, TargetMovePos, MoveTime, MaxTime);
 
+		Debug.Log("pos : " + pos);
+
 		if (MoveTime >= MaxTime)
 		{
 			pos = TargetMovePos;
@@ -316,13 +323,15 @@ public class Block
 		{
 			case MOVE_UP:
 			case MOVE_DOWN:
-				objBlock.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, pos, 0);
-				objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, pos, 0);
+				objBlock.transform.position = new Vector3(objBlock.transform.position.x, pos - (StageData.Instance.data.Height / 2.0f), objBlock.transform.position.z);
+//				objBlock.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, pos, 0);
+//				objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, pos, 0);
 				break;
 			case MOVE_LEFT:
 			case MOVE_RIGHT:
-				objBlock.GetComponent<RectTransform>().localPosition = new Vector3(pos, objBlock.GetComponent<RectTransform>().localPosition.y, 0);
-				objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(pos, objBlock.GetComponent<RectTransform>().localPosition.y, 0);
+				objBlock.transform.position = new Vector3(pos - (StageData.Instance.data.Width / 2.0f), objBlock.transform.position.y, objBlock.transform.position.z);
+//				objBlock.GetComponent<RectTransform>().localPosition = new Vector3(pos, objBlock.GetComponent<RectTransform>().localPosition.y, 0);
+//				objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(pos, objBlock.GetComponent<RectTransform>().localPosition.y, 0);
 				break;
 		}
 

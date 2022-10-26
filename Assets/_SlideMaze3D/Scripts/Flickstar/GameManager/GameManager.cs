@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour {
 
 		for ( int i=0; i<screenObject.Length; i++ ) {
 			screenController [i] = screenObject[i].GetComponent<ScreenController>();
-            screenController[i].Initialize();
+//            screenController[i].Initialize();
 			screenObject [i].SetActive (false);
 		}
 			
