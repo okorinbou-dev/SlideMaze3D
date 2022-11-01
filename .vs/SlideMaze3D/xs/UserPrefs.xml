@@ -1,34 +1,13 @@
 ﻿<Properties StartupConfiguration="{C697AF34-22D4-EE20-D760-C1C1AEFC0DB7}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs">
+    <Files>
+      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" Line="7257" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SlideMaze3D" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="_Application" expanded="True">
-                <Node name="Scenes" expanded="True">
-                  <Node name="Loading" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                  <Node name="StageSelect" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                  <Node name="Top" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="_YouCreateLib" expanded="True">
-                <Node name="AspectController" expanded="True" />
-                <Node name="Utility" expanded="True">
-                  <Node name="ObjectPool.cs" selected="True" />
-                </Node>
-              </Node>
-              <Node name="Editor" expanded="True">
-                <Node name="Flickstar" expanded="True" />
-              </Node>
-              <Node name="Plugins" expanded="True" />
-            </Node>
+            <Node name="Assets" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>

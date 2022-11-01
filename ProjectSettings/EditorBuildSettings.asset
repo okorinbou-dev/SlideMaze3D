@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Application/Scenes/Loading/Loading.unity
     guid: 2f224d8e9d986424e9f155dab62c7a10
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Application/Scenes/Top/Top.unity
     guid: 2d4e305090e824db18848dde0698dc63
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Application/Scenes/StageSelect/StageSelect.unity
     guid: 128372418c5d74a248ef85db68b4d021
   m_configObjects: {}
