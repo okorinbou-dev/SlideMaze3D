@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using UniRx;
+
 public class Top : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            SceneManager.LoadSceneAsync("StageSelect");
-        }
+        Observable
+            .EveryUpdate()
+            .Where(_ => Input.GetMouseButtonDown(0))
+            .Subscribe(_ => SceneManager.LoadSceneAsync("StageSelect"))
+            .AddTo(this);
     }
 }

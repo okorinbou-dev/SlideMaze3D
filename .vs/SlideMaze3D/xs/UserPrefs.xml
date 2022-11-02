@@ -1,36 +1,17 @@
 ﻿<Properties StartupConfiguration="{C697AF34-22D4-EE20-D760-C1C1AEFC0DB7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Application/Scripts/Flickstar/Global/Global.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Application/Scenes/00_Loading/Scripts/LoadingScene.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" Line="7257" Column="1" />
-      <File FileName="Assets/_Application/Scenes/Top/Scripts/Top.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Application/Scenes/02_StageSelect/Scripts/Panel.cs" Line="19" Column="33" />
+      <File FileName="Assets/_Application/Scenes/Top/Scripts/Top.cs" Line="16" Column="61" />
+      <File FileName="Assets/_Application/Scenes/02_StageSelect/Scripts/Panel.cs" Line="20" Column="3" />
       <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/PackSelectController.cs" Line="42" Column="74" />
       <File FileName="Assets/_Application/Scripts/Flickstar/Global/Global.cs" Line="33" Column="21" />
+      <File FileName="Assets/_Application/Scenes/00_Loading/Scripts/LoadingScene.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SlideMaze3D" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="_Application" expanded="True">
-                <Node name="Scenes" expanded="True">
-                  <Node name="02_StageSelect" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="Scripts" expanded="True">
-                  <Node name="Flickstar" expanded="True">
-                    <Node name="GameManager" expanded="True">
-                      <Node name="ScreenController" expanded="True" />
-                    </Node>
-                    <Node name="Global" expanded="True">
-                      <Node name="Global.cs" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="SlideMaze3D" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

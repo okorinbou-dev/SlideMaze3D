@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 using System.Threading.Tasks;
+
+using UniRx;
 
 namespace YCLib
 {
@@ -12,13 +15,12 @@ namespace YCLib
 
             private void Start()
             {
-                LoadAsync();
-            }
-
-            private async void LoadAsync()
-            {
-                await Task.Delay(5000);
-                SceneManager.LoadSceneAsync(NextSceneName);
+                Observable.Timer(TimeSpan.FromSeconds(5))
+                    .Subscribe(_ =>
+                    {
+                        SceneManager.LoadSceneAsync(NextSceneName);
+                    })
+                    .AddTo(this);
             }
         }
     }
