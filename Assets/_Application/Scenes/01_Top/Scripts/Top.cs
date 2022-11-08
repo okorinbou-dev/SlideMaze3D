@@ -13,7 +13,7 @@ public class Top : MonoBehaviour
         Observable
             .EveryUpdate()
             .Where(_ => Input.GetMouseButtonDown(0))
-            .Subscribe(_ => SceneManager.LoadSceneAsync("StageSelect"))
+            .Subscribe(_ => SceneManager.LoadSceneAsync("LevelSelect"))
             .AddTo(this);
     }
 }

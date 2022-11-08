@@ -246,10 +246,12 @@ public class GameController : ScreenController
 			*/
 
 			// ota add 3D
+			/*
 			YCLib.Utility.ObjectPool.Initialize(3);
 			YCLib.Utility.ObjectPool.SetPrefab(0, (GameObject)Resources.Load("Prefabs/3D/Block"));
 			YCLib.Utility.ObjectPool.SetPrefab(1, (GameObject)Resources.Load("Prefabs/3D/Player"));
 			YCLib.Utility.ObjectPool.SetPrefab(2, (GameObject)Resources.Load("Prefabs/3D/Goal"));
+			*/
 
 			Initialized = true;
 		}
