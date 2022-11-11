@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{C697AF34-22D4-EE20-D760-C1C1AEFC0DB7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_YouCreateLib/Utility/ObjectPool.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Application/Scenes/04_Game/Scripts/DirectLightController.cs">
     <Files>
       <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" Line="7257" Column="1" />
       <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/PackSelectController.cs" />
       <File FileName="Assets/_Application/Scripts/Flickstar/Global/Global.cs" Line="5" Column="14" />
       <File FileName="Assets/_Application/Scenes/00_Loading/Scripts/LoadingScene.cs" Line="22" Column="1" />
       <File FileName="Assets/_Application/Scenes/00_Loading/Scripts/LoadingUI.cs" />
-      <File FileName="Assets/_Application/Scripts/GameInfo.cs" Line="12" Column="24" />
-      <File FileName="Assets/_Application/Scenes/02_LevelSelect/Scripts/LevelSelect.cs" Line="27" Column="45" />
+      <File FileName="Assets/_Application/Scripts/GameInfo.cs" Line="28" Column="6" />
+      <File FileName="Assets/_Application/Scenes/02_LevelSelect/Scripts/LevelSelect.cs" Line="14" Column="1" />
       <File FileName="Assets/_Application/Scenes/02_LevelSelect/Scripts/Panel.cs" Line="22" Column="1" />
       <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/TopController.cs" Line="124" Column="8" />
-      <File FileName="Assets/_Application/Scenes/03_StageSelect/Scripts/StageSelect.cs" Line="26" Column="43" />
+      <File FileName="Assets/_Application/Scenes/03_StageSelect/Scripts/StageSelect.cs" Line="26" Column="1" />
       <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/StageSelectController.cs" Line="113" Column="1" />
-      <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/GameController.cs" Line="400" Column="13" />
+      <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/GameController.cs" Line="97" Column="1" />
       <File FileName="Assets/_YouCreateLib/Editor/SettingStageSceneWindow.cs" Line="13" Column="37" />
       <File FileName="Assets/_Application/Scenes/03_StageSelect/Scripts/PanelStageNo.cs" Line="22" Column="6" />
-      <File FileName="Assets/_Application/Scenes/04_Game/Scripts/Game.cs" Line="56" Column="18" />
+      <File FileName="Assets/_Application/Scenes/04_Game/Scripts/Game.cs" Line="66" Column="159" />
       <File FileName="Assets/_Application/Scripts/Flickstar/StageData/StageData.cs" Line="20" Column="14" />
-      <File FileName="Assets/_YouCreateLib/Utility/ObjectPool.cs" Line="115" Column="1" />
+      <File FileName="Assets/_YouCreateLib/Utility/ObjectPool.cs" Line="115" Column="41" />
+      <File FileName="Assets/_Application/Scenes/04_Game/Scripts/DirectLightController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -39,7 +40,9 @@
                     <Node name="Scripts" expanded="True" />
                   </Node>
                   <Node name="04_Game" expanded="True">
-                    <Node name="Scripts" expanded="True" />
+                    <Node name="Scripts" expanded="True">
+                      <Node name="DirectLightController.cs" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
                 <Node name="Scripts" expanded="True">
@@ -54,9 +57,7 @@
               </Node>
               <Node name="_YouCreateLib" expanded="True">
                 <Node name="Editor" expanded="True" />
-                <Node name="Utility" expanded="True">
-                  <Node name="ObjectPool.cs" selected="True" />
-                </Node>
+                <Node name="Utility" expanded="True" />
               </Node>
             </Node>
           </Node>
