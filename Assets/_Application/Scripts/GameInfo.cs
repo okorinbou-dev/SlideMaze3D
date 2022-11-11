@@ -14,6 +14,8 @@ public class GameInfo : MonoBehaviour
     public enum OBJECTPOOL
     {
         STAGEPANEL,
+
+        FLOOR,
         BLOCK,
         PLAYER,
         GOAL,
@@ -27,6 +29,7 @@ public class GameInfo : MonoBehaviour
         ObjectPool.Initialize((int)OBJECTPOOL.NUM);
 
         ObjectPool.SetPrefab((int)OBJECTPOOL.STAGEPANEL, (GameObject)Resources.Load("Prefabs/3D/PanelStageNo"));
+        ObjectPool.SetPrefab((int)OBJECTPOOL.FLOOR, (GameObject)Resources.Load("Prefabs/3D/Floor"));
         ObjectPool.SetPrefab((int)OBJECTPOOL.BLOCK, (GameObject)Resources.Load("Prefabs/3D/Block"));
         ObjectPool.SetPrefab((int)OBJECTPOOL.PLAYER, (GameObject)Resources.Load("Prefabs/3D/Player"));
         ObjectPool.SetPrefab((int)OBJECTPOOL.GOAL, (GameObject)Resources.Load("Prefabs/3D/Goal"));

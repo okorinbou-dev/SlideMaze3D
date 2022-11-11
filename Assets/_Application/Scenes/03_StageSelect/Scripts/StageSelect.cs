@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using UniRx;
+using UniRx.Triggers;
 
 using YCLib.Utility;
 
@@ -29,5 +30,14 @@ public class StageSelect : MonoBehaviour
             obj.GetComponent<PanelStageNo>().SetStageNo(i+1);
             listPanel.Add(obj);
         }
+
+        this.UpdateAsObservable()
+            .Where(_ => Input.GetMouseButtonDown(0))
+            .Subscribe(_ =>
+            {
+                ObjectPool.ReturnAll((int)GameInfo.OBJECTPOOL.STAGEPANEL);
+                SceneManager.LoadSceneAsync("Game");
+            })
+            .AddTo(this);
     }
 }

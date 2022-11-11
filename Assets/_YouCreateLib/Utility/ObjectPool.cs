@@ -111,6 +111,20 @@ namespace YCLib
 
                 _poolObjectNum[poolno]--;
             }
+
+            public static void ReturnAll (int poolno)
+            {
+                foreach (GameObject obj in _pool[poolno])
+                {
+                    if (obj.activeSelf)
+                    {
+                        obj.SetActive(false);
+                        obj.transform.SetParent(null);
+
+                        _poolObjectNum[poolno]--;
+                    }
+                }
+            }
         }
     }
 }
