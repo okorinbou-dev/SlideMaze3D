@@ -11,10 +11,10 @@ public class Block
 	const int MOVE_RIGHT = 3;
 
 	GameObject objBlock;
-//	GameObject objBlockShadow;
-//	Image imgSurface;
+	//	GameObject objBlockShadow;
+	//	Image imgSurface;
 
-	int MoveDirection = MOVE_UP;
+	Game.Direction MoveDirection = Game.Direction.UP;
 
 	float StartMovePos = 0.0f;
 	float TargetMovePos = 0.0f;
@@ -167,7 +167,7 @@ public class Block
 		}
 	}
 
-	public void SetMove(int dir, float startpos, float targetpos, float time)
+	public void SetMove(Game.Direction dir, float startpos, float targetpos, float time)
 	{
 		MoveFlag = true;
 		MoveDirection = dir;
@@ -224,7 +224,7 @@ public class Block
 
 	bool TouchAnimeRequest = false;
 	bool TouchAnime = false;
-	int TouchDirection = 0;
+	Game.Direction TouchDirection = 0;
 	float TouchMoveMax = 5.0f;
 	float TouchMoveVal = 0;
 	float TouchMoveAddVal = 1.0f;
@@ -233,12 +233,14 @@ public class Block
 
 	public void SetTouchAnime(int dir)
 	{
+		/*
 		TouchMove = 0.0f;
 		TouchMoveVal = TouchMoveMax;
 		TouchDirection = dir;
-		TouchStartPos = (dir == MOVE_UP || dir == MOVE_DOWN) ? objBlock.GetComponent<RectTransform>().localPosition.y : objBlock.GetComponent<RectTransform>().localPosition.x;
+		TouchStartPos = (dir == Game.Direction.UP || dir == Game.Direction.DOWN) ? objBlock.GetComponent<RectTransform>().localPosition.y : objBlock.GetComponent<RectTransform>().localPosition.x;
 		TouchAnimeRequest = true;
 		TouchAnime = false;
+		*/
 	}
 
 	public void PlayTouchAnime()
@@ -321,15 +323,15 @@ public class Block
 
 		switch (MoveDirection)
 		{
-			case MOVE_UP:
-			case MOVE_DOWN:
-				objBlock.transform.position = new Vector3(objBlock.transform.position.x, pos - (StageData.Instance.data.Height / 2.0f), objBlock.transform.position.z);
+			case Game.Direction.UP:
+			case Game.Direction.DOWN:
+				objBlock.transform.localPosition = new Vector3(objBlock.transform.localPosition.x, pos - (StageData.Instance.data.Height / 2.0f), objBlock.transform.localPosition.z);
 //				objBlock.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, pos, 0);
 //				objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(objBlock.GetComponent<RectTransform>().localPosition.x, pos, 0);
 				break;
-			case MOVE_LEFT:
-			case MOVE_RIGHT:
-				objBlock.transform.position = new Vector3(pos - (StageData.Instance.data.Width / 2.0f), objBlock.transform.position.y, objBlock.transform.position.z);
+			case Game.Direction.LEFT:
+			case Game.Direction.RIGHT:
+				objBlock.transform.localPosition = new Vector3(pos - (StageData.Instance.data.Width / 2.0f), objBlock.transform.localPosition.y, objBlock.transform.localPosition.z);
 //				objBlock.GetComponent<RectTransform>().localPosition = new Vector3(pos, objBlock.GetComponent<RectTransform>().localPosition.y, 0);
 //				objBlockShadow.GetComponent<RectTransform>().localPosition = new Vector3(pos, objBlock.GetComponent<RectTransform>().localPosition.y, 0);
 				break;

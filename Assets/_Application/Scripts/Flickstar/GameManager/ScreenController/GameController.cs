@@ -252,7 +252,6 @@ public class GameController : ScreenController
 			YCLib.Utility.ObjectPool.SetPrefab(1, (GameObject)Resources.Load("Prefabs/3D/Player"));
 			YCLib.Utility.ObjectPool.SetPrefab(2, (GameObject)Resources.Load("Prefabs/3D/Goal"));
 			*/
-
 			Initialized = true;
 		}
 	}
@@ -916,14 +915,14 @@ public class GameController : ScreenController
 					// 横移動
 					dir = (movex > 0.0f) ? MOVE_LEFT : MOVE_RIGHT;
 					int TargetNum = SearchMoveTarget (dir);
-					playerBlock.SetMove (dir, (float)CurrentPlayerPos.x, (float)TargetNum, Mathf.Abs (0.05f * (CurrentPlayerPos.x - TargetNum)));
+//					playerBlock.SetMove (dir, (float)CurrentPlayerPos.x, (float)TargetNum, Mathf.Abs (0.05f * (CurrentPlayerPos.x - TargetNum)));
 //					playerBlock.SetMove(dir, objPlayer.GetComponent<RectTransform>().localPosition.x, (BlockSize * TargetNum), Mathf.Abs(0.05f * (CurrentPlayerPos.x - TargetNum)));
 					CurrentPlayerPos.x = TargetNum;
 				} else {
 					// 縦移動
 					dir = (movey > 0.0f) ? MOVE_UP : MOVE_DOWN;
 					int TargetNum = SearchMoveTarget (dir);
-					playerBlock.SetMove(dir, (float)CurrentPlayerPos.y, (float)TargetNum, Mathf.Abs(0.05f * (CurrentPlayerPos.y - TargetNum)));
+//					playerBlock.SetMove(dir, (float)CurrentPlayerPos.y, (float)TargetNum, Mathf.Abs(0.05f * (CurrentPlayerPos.y - TargetNum)));
 //						playerBlock.SetMove (dir, objPlayer.GetComponent<RectTransform> ().localPosition.y, (BlockSize * TargetNum), Mathf.Abs (0.05f * (CurrentPlayerPos.y - TargetNum)));
 					CurrentPlayerPos.y = TargetNum;
 				}
@@ -1155,11 +1154,11 @@ public class GameController : ScreenController
 			if (hintBlock.x == StageData.Instance.data.AnswerRoute [HintRouteNo].x) {
 				// 縦移動
 				targetpos = StageData.Instance.data.AnswerRoute [HintRouteNo].y;
-				hintBlock.SetMove ((hintBlock.y - targetpos < 0) ? MOVE_DOWN : MOVE_UP, objHintBlock.GetComponent<RectTransform> ().localPosition.y, (BlockSize * targetpos), Mathf.Abs (HintMoveTime * (hintBlock.y - targetpos)));
+//				hintBlock.SetMove ((hintBlock.y - targetpos < 0) ? MOVE_DOWN : MOVE_UP, objHintBlock.GetComponent<RectTransform> ().localPosition.y, (BlockSize * targetpos), Mathf.Abs (HintMoveTime * (hintBlock.y - targetpos)));
 			} else {
 				// 横移動
 				targetpos = StageData.Instance.data.AnswerRoute [HintRouteNo].x;
-				hintBlock.SetMove ((hintBlock.x - targetpos < 0) ? MOVE_RIGHT : MOVE_LEFT, objHintBlock.GetComponent<RectTransform> ().localPosition.x, (BlockSize * targetpos), Mathf.Abs (HintMoveTime * (hintBlock.x - targetpos)));
+//				hintBlock.SetMove ((hintBlock.x - targetpos < 0) ? MOVE_RIGHT : MOVE_LEFT, objHintBlock.GetComponent<RectTransform> ().localPosition.x, (BlockSize * targetpos), Mathf.Abs (HintMoveTime * (hintBlock.x - targetpos)));
 			}
 			hintBlock.x = StageData.Instance.data.AnswerRoute [HintRouteNo].x;
 			hintBlock.y = StageData.Instance.data.AnswerRoute [HintRouteNo].y;

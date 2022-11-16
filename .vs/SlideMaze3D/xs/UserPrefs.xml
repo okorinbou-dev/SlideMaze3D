@@ -1,30 +1,27 @@
 ﻿<Properties StartupConfiguration="{C697AF34-22D4-EE20-D760-C1C1AEFC0DB7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Application/Scenes/04_Game/Scripts/DirectLightController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Application/Scenes/04_Game/Scripts/Game.cs">
     <Files>
-      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" Line="7257" Column="1" />
+      <File FileName="Assets/_Application/Scripts/GameInfo.cs" Line="28" Column="6" IsPinned="True" />
+      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" />
       <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/PackSelectController.cs" />
-      <File FileName="Assets/_Application/Scripts/Flickstar/Global/Global.cs" Line="5" Column="14" />
-      <File FileName="Assets/_Application/Scenes/00_Loading/Scripts/LoadingScene.cs" Line="22" Column="1" />
+      <File FileName="Assets/_Application/Scripts/Flickstar/Global/Global.cs" />
+      <File FileName="Assets/_Application/Scenes/00_Loading/Scripts/LoadingScene.cs" />
       <File FileName="Assets/_Application/Scenes/00_Loading/Scripts/LoadingUI.cs" />
-      <File FileName="Assets/_Application/Scripts/GameInfo.cs" Line="28" Column="6" />
-      <File FileName="Assets/_Application/Scenes/02_LevelSelect/Scripts/LevelSelect.cs" Line="14" Column="1" />
-      <File FileName="Assets/_Application/Scenes/02_LevelSelect/Scripts/Panel.cs" Line="22" Column="1" />
-      <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/TopController.cs" Line="124" Column="8" />
-      <File FileName="Assets/_Application/Scenes/03_StageSelect/Scripts/StageSelect.cs" Line="26" Column="1" />
-      <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/StageSelectController.cs" Line="113" Column="1" />
-      <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/GameController.cs" Line="97" Column="1" />
-      <File FileName="Assets/_YouCreateLib/Editor/SettingStageSceneWindow.cs" Line="13" Column="37" />
-      <File FileName="Assets/_Application/Scenes/03_StageSelect/Scripts/PanelStageNo.cs" Line="22" Column="6" />
-      <File FileName="Assets/_Application/Scenes/04_Game/Scripts/Game.cs" Line="66" Column="159" />
-      <File FileName="Assets/_Application/Scripts/Flickstar/StageData/StageData.cs" Line="20" Column="14" />
-      <File FileName="Assets/_YouCreateLib/Utility/ObjectPool.cs" Line="115" Column="41" />
-      <File FileName="Assets/_Application/Scenes/04_Game/Scripts/DirectLightController.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Application/Scenes/02_LevelSelect/Scripts/LevelSelect.cs" />
+      <File FileName="Assets/_Application/Scripts/Flickstar/GameManager/ScreenController/GameController.cs" />
+      <File FileName="Assets/_Application/Scenes/03_StageSelect/Scripts/PanelStageNo.cs" />
+      <File FileName="Assets/_Application/Scenes/04_Game/Scripts/Game.cs" Line="456" Column="1" />
+      <File FileName="Assets/_Application/Scripts/Flickstar/StageData/StageData.cs" />
+      <File FileName="Assets/_YouCreateLib/Utility/ObjectPool.cs" />
+      <File FileName="Assets/_Application/Scenes/04_Game/Scripts/DirectLightController.cs" />
+      <File FileName="Assets/_YouCreateLib/Utility/TouchInfo.cs" />
+      <File FileName="Assets/_Application/Scripts/Flickstar/Game/Block.cs" Line="170" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SlideMaze3D" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="_Application" expanded="True">
                 <Node name="Scenes" expanded="True">
                   <Node name="00_Loading" expanded="True">
@@ -40,13 +37,12 @@
                     <Node name="Scripts" expanded="True" />
                   </Node>
                   <Node name="04_Game" expanded="True">
-                    <Node name="Scripts" expanded="True">
-                      <Node name="DirectLightController.cs" selected="True" />
-                    </Node>
+                    <Node name="Scripts" expanded="True" />
                   </Node>
                 </Node>
                 <Node name="Scripts" expanded="True">
                   <Node name="Flickstar" expanded="True">
+                    <Node name="Game" expanded="True" />
                     <Node name="GameManager" expanded="True">
                       <Node name="ScreenController" expanded="True" />
                     </Node>
@@ -63,14 +59,11 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e5eb7437-81ce-45cc-a4b3-0e0cb4ce1e60" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f117968d-26dd-43bd-9a52-ae5641a0c50b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
