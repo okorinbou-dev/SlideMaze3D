@@ -55,4 +55,9 @@ public class GameInfo : MonoBehaviour
 
         StageNum = stagenum[SelectLevel]; 
     }
+
+    void OnApplicationPause(bool isPaused)
+    {
+        IronSource.Agent.onApplicationPause(isPaused);
+    }
 }

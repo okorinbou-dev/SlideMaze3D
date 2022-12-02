@@ -1,0 +1,9 @@
+<dependencies>
+  <iosPods>
+    <iosPod name="IronSourceSDK" version="~> 7.2.5.1">
+      <sources>
+        <source>https://github.com/CocoaPods/Specs</source>
+      </sources>
+    </iosPod>
+  </iosPods>
+</dependencies>

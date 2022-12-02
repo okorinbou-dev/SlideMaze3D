@@ -175,8 +175,6 @@ public class Block
 		TargetMovePos = targetpos;
 		MoveTime = 0.0f;
 		MaxTime = time;
-
-		Debug.Log("StartMovePos " + StartMovePos + " : TargetMovePos " + TargetMovePos);
 	}
 
 	public bool isMove()
@@ -311,8 +309,6 @@ public class Block
 		MoveTime += Time.deltaTime;
 
 		float pos = GetBreakPos(StartMovePos, TargetMovePos, MoveTime, MaxTime);
-
-		Debug.Log("pos : " + pos);
 
 		if (MoveTime >= MaxTime)
 		{

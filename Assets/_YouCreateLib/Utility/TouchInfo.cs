@@ -27,7 +27,7 @@ public class TouchInfo
 #else
 		if (Input.touchCount > 0)
 		{
-			return (TouchInfo)((int)Input.GetTouch(0).phase);
+			return (TouchPhase)((int)Input.GetTouch(0).phase);
 		}
 #endif
 

@@ -23,7 +23,6 @@ public class LevelSelect : MonoBehaviour
                 if (Physics.Raycast(_ray, out _hit))
                 {
                     gameInfo.SelectLevel = _hit.collider.gameObject.GetComponent<Panel>().level;
-                    Debug.Log("gameInfo.SelectLevel : "+ (gameInfo.SelectLevel + 1).ToString());
                     SceneManager.LoadSceneAsync("StageSelect");
                 }
             })
